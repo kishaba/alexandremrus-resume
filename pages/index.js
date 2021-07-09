@@ -3,9 +3,21 @@ import getUser from '../utils/getUser';
 
 const Index = ({ repos, user }) => {
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-5xl'>Olá, eu sou o Alexandre Mrus</h1>
-      <h2 className='font-bold text-3xl'> Meus repositórios no GitHub</h2>
+    <div className='container mx-auto '>
+      <div class='grid grid-cols-2 pt-16 text-white'>
+        <div>
+          <h1 className='text-4xl uppercase'>Olá, eu sou o ALEXANDRE MRUS</h1>
+          <h2 className='font-bold text-5xl uppercase'>Desenvolvedor FullStack</h2>
+          <h3>Contato</h3>
+          <ul>
+            <li>Linkedin</li>
+          </ul>
+        </div>
+        <div>
+          <img src='/images/avatar.png' />
+        </div>
+      </div>
+
       <p>
         Github stats: public repos: {user.public_repos} / public_gists: {user.public_gists} /
         followes: {user.followers}
