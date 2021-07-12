@@ -1,4 +1,5 @@
 .next
 node_modules
+.next/cache/webpack/client-development/0.pack
 *.pack
-.next/build-manifest.json
+*.pack
