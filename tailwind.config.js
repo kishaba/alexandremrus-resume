@@ -2,10 +2,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: ['"Titillium Web"'],
+    fontFamily: {},
+    extend: {
+      colors: {
+        purple: '#5429CF',
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},

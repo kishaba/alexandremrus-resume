@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 body {
-  background: #181818 url(/images/back-network.png) top center no-repeat;
+  background: #181818;
+}
+.bg-network {
+  background: url(/images/back-network.png) top right no-repeat;
 }
