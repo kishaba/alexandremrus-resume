@@ -1,6 +1,9 @@
 import React from 'react';
 import getUser from '../utils/getUser';
 import { FaLinkedin, FaGithub, FaMailBulk } from 'react-icons/fa';
+import { RiGitRepositoryCommitsLine } from 'react-icons/ri';
+import { FiUsers } from 'react-icons/fi';
+import { GoStar } from 'react-icons/Go';
 
 const Index = ({ repos, user }) => {
   return (
@@ -40,7 +43,7 @@ const Index = ({ repos, user }) => {
         </h3>
         <div className='grid grid-cols-2 leading-none bg-white rounded-lg shadow-lg py-6 px-12 '>
           {[1, 2].map((i) => (
-            <div className='border-dashed border-l-2 px-12'>
+            <div className='border-dashed  border-l-2 px-12'>
               <h4 className='text-lg uppercase font-bold mb-2 text-purple'>Formação Acadêmica</h4>
               <p className='text-2xl uppercase'>Ciência da computação</p>
               <span className='text-lg normal-case'>UPF - Universidade de Passo Fundo</span>
@@ -48,20 +51,30 @@ const Index = ({ repos, user }) => {
           ))}
         </div>
       </div>
-      <p>
-        Github stats: public repos: {user.public_repos} / public_gists: {user.public_gists} /
-        followes: {user.followers}
-      </p>
-      {repos.map((repo) => {
-        return (
-          <div key={repo.id} className='rounded bg-gray-200 mx-8 my-4 p-4 hover:shadow-md'>
-            <h3 className='font-bold'>{repo.full_name}</h3>
-            <p>
-              Language: {repo.language} / Stars: {repo.stargazers_count}
-            </p>
-          </div>
-        );
-      })}
+
+      <div>
+        <h3 className='text-4xl text-white text-center font-bold uppercase mt-10 text-purple'>
+          Tech contributions
+        </h3>
+        <p className='text-center text-white'>
+          Github stats: <RiGitRepositoryCommitsLine className='inline-block' />: {user.public_repos}{' '}
+          /
+          <FiUsers className='inline-block ml-2' /> {user.followers}
+        </p>
+        <div className='grid grid-cols-3 gap-3 my-6'>
+          {repos.map((repo) => {
+            return (
+              <div key={repo.id} className='rounded bg-white my-4 p-4 hover:shadow-md'>
+                <h3 className='font-bold'>{repo.full_name}</h3>
+                <p>
+                  Language: {repo.language} / <GoStar className='inline-block' />
+                  {repo.stargazers_count}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
