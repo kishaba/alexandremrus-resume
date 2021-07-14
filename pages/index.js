@@ -1,36 +1,16 @@
 import React from 'react';
 import getUser from '../utils/getUser';
-import { FaLinkedin, FaGithub, FaMailBulk } from 'react-icons/fa';
 import { RiGitRepositoryCommitsLine } from 'react-icons/ri';
 import { FiUsers } from 'react-icons/fi';
 import { GoStar } from 'react-icons/Go';
+import PageHead from '../components/PageHead';
+import Hero from '../components/Hero';
 
 const Index = ({ repos, user }) => {
   return (
     <div className='container mx-auto '>
-      <div className='grid grid-cols-2 pt-16 text-white leading-none h-screen'>
-        <div className='pt-32'>
-          <h1 className='text-3xl uppercase  pl-16'>Olá, eu sou o ALEXANDRE MRUS</h1>
-          <h2 className='font-bold text-4xl uppercase  pl-16'>Desenvolvedor FullStack</h2>
-          <div className='relative border-purple border rounded px-16 pb-4 pt-8  mt-6 w-96 ml-16'>
-            <h3 className='absolute top-0 -mt-6 text-2xl py-2 px-6 font-bold uppercase bg-purple'>
-              Contato
-            </h3>
-            <p>
-              <FaLinkedin className='text-6xl inline-block mr-6' />
-              <FaGithub className='text-6xl inline-block mr-6' />
-              <FaMailBulk className='text-6xl inline-block mr-6' />
-            </p>
-          </div>
-        </div>
-        <div className='pt-32'>
-          {/* <img className='w-96 mb-48' src='/images/avatar.png' /> */}
-          <div className='caixa'>
-            <p className='stars'></p>
-            <p className='stars2'></p>
-          </div>
-        </div>
-      </div>
+      <PageHead />
+      <Hero />
 
       <div className='bg-white rounded-lg shadow-lg py-12 px-16'>
         <h3 className='text-4xl text-center font-bold uppercase text-purple'> Serviços </h3>
@@ -61,19 +41,31 @@ const Index = ({ repos, user }) => {
           /
           <FiUsers className='inline-block ml-2' /> {user.followers}
         </p>
-        <div className='grid grid-cols-3 gap-3 my-6'>
+        <div className='md:grid md:grid-cols-3 md:gap-3 my-6'>
           {repos.map((repo) => {
             return (
-              <div key={repo.id} className='rounded bg-white my-4 p-4 hover:shadow-md'>
-                <h3 className='font-bold'>{repo.full_name}</h3>
+              <div key={repo.id} className='rounded bg-white my-4 p-4 hover:shadow-md rounded-lg'>
+                <h3 className='font-bold hover:underline'>
+                  <a href={'https://github.com/' + repo.full_name}>{repo.full_name}</a>
+                </h3>
                 <p>
-                  Language: {repo.language} / <GoStar className='inline-block' />
+                  Language: {repo.language} / <GoStar className='inline-block' /> Stars:{' '}
                   {repo.stargazers_count}
                 </p>
               </div>
             );
           })}
         </div>
+      </div>
+
+      <div>
+        <p className='text-center text-white my-8 py-4 border-t-2'>
+          Você pode achar o fonte desse site em:
+          <br />
+          <a href='https://github.com/kishaba/alexandremrus-resume'>
+            https://github.com/kishaba/alexandremrus-resume
+          </a>
+        </p>
       </div>
     </div>
   );
