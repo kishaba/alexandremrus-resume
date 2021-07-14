@@ -2,7 +2,7 @@ import React from 'react';
 import getUser from '../utils/getUser';
 import { RiGitRepositoryCommitsLine } from 'react-icons/ri';
 import { FiUsers } from 'react-icons/fi';
-import { GoStar } from 'react-icons/Go';
+import { GoStar } from 'react-icons/go';
 import PageHead from '../components/PageHead';
 import Hero from '../components/Hero';
 
