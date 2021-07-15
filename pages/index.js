@@ -8,11 +8,11 @@ import Hero from '../components/Hero';
 
 const Index = ({ repos, user }) => {
   return (
-    <div className='container mx-auto '>
+    <div className='container mx-auto px-2 md:px-4'>
       <PageHead />
       <Hero />
 
-      <div className='bg-white rounded-lg shadow-lg py-12 px-16'>
+      <div className='bg-white rounded-lg shadow-lg py-6  px-6 mx-6 md:mx-0 md:px-12 '>
         <h3 className='text-4xl text-center font-bold uppercase text-purple'> Serviços </h3>
         <p className='text-2xl'>Desenvolvedor Node.Js</p>
       </div>
@@ -21,9 +21,9 @@ const Index = ({ repos, user }) => {
         <h3 className='text-4xl text-white text-center font-bold uppercase mt-10 mb-5 text-purple'>
           Formação
         </h3>
-        <div className='grid grid-cols-2 leading-none bg-white rounded-lg shadow-lg py-6 px-12 '>
+        <div className='md:grid md:grid-cols-2 leading-none bg-white rounded-lg shadow-lg py-6  px-6 mx-6 md:mx-0 md:px-12 '>
           {[1, 2].map((i) => (
-            <div className='border-dashed  border-l-2 px-12'>
+            <div className='border-dashed border-t md:border-t-0 md:border-l  px-12'>
               <h4 className='text-lg uppercase font-bold mb-2 text-purple'>Formação Acadêmica</h4>
               <p className='text-2xl uppercase'>Ciência da computação</p>
               <span className='text-lg normal-case'>UPF - Universidade de Passo Fundo</span>
@@ -44,7 +44,10 @@ const Index = ({ repos, user }) => {
         <div className='md:grid md:grid-cols-3 md:gap-3 my-6'>
           {repos.map((repo) => {
             return (
-              <div key={repo.id} className='rounded bg-white my-4 p-4 hover:shadow-md rounded-lg'>
+              <div
+                key={repo.id}
+                className='rounded bg-white my-4 p-4 hover:shadow-md rounded-lg py-6  px-6 mx-6 md:mx-0 md:px-12'
+              >
                 <h3 className='font-bold hover:underline'>
                   <a href={'https://github.com/' + repo.full_name}>{repo.full_name}</a>
                 </h3>

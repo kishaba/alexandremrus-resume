@@ -11,8 +11,8 @@ const Hero = () => {
         <h2 className='font-bold text:3xl md:text-4xl uppercase  pl-10  md:pl-16'>
           Desenvolvedor FullStack
         </h2>
-        <div className='relative border-purple border rounded px-16 pb-4 pt-8  mt-6 w-72 md:w-96 ml-10 md:ml-16'>
-          <h3 className='absolute top-0 -mt-6 text-2xl py-2 px-6 font-bold uppercase bg-purple'>
+        <div className='text-center relative border-purple border rounded px-16 pb-4 pt-8  mt-6 w-72 md:w-96 ml-10 md:ml-16'>
+          <h3 className='absolute top-0 -mt-6 text-2xl py-2 px-8 font-bold uppercase bg-purple'>
             Contato
           </h3>
           <p>
