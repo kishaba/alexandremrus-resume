@@ -2,7 +2,7 @@
 
 Este projeto é o código-fonte do curriculo online de Alexandre Mrus, disponível em: https://alexandremrus-resume.vercel.app/
 
-![Preview](https://github.com/tuliofaria/tuliofaria.dev/blob/master/print.png?raw=true)
+![Preview](https://github.com/kishaba/alexandremrus-resume/blob/main/Alexandre%20Mrus%20-%20FullStack%20Developer%20-%20Google%20Chrome.jpg?raw=true)
 
 ## Início
 
@@ -19,7 +19,7 @@ npm run dev
 
 ## Layout:
 
-Criamos o layout utilizando o Figma. Você pode encontrar o arquivo [aqui](https://www.figma.com/file/9bUM0ZS9hzXS9eh9VMXEbc/resume?node-id=0%3A1).
+Criamos o layout utilizando o Figma.
 
 ## Colocando em produção:
 
@@ -35,7 +35,7 @@ Este projeto pode ser colocado em produção utilizando o Vercel (sem configura�
 
 ## Author:
 
-- **Alexandre Mrus** - [LinkedIn](https://www.linkedin.com/in/alexandremrus/)
+- **Alexandre Mrus** - [LinkedIn](https://www.linkedin.com/in/alexandre-mrus/)
 
 ## Licença
 
