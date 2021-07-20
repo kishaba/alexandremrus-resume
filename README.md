@@ -39,7 +39,7 @@ Este projeto pode ser colocado em produção utilizando o Vercel (sem configura�
 
 ## Licença
 
-Este projeto é licenciado sobre a licença MIT - veja [LICENSE.md](LICENSE.md) para mais informações.
+Este projeto é licenciado sobre a licença MIT - veja [LICENSE.md](https://github.com/kishaba/alexandremrus-resume/blob/main/License.md) para mais informações.
 
 ## Acknowledgments
 
