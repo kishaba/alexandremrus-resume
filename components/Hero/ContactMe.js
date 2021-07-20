@@ -8,9 +8,15 @@ const ContactMe = () => {
         Contato
       </h3>
       <p>
-        <FaLinkedin className='tet-3xl md:text-6xl inline-block mr-6' />
-        <FaGithub className='text-3xl md:text-6xl inline-block mr-6' />
-        <FaMailBulk className='text-3xl md:text-6xl inline-block mr-6' />
+        <a href='https://linkedin.com/in/alexandre-mrus' title='LinkedIn Profile'>
+          <FaLinkedin className='tet-3xl md:text-6xl inline-block mr-6' />
+        </a>
+        <a href='https://github.com/kishaba' title='GitHub Profile'>
+          <FaGithub className='text-3xl md:text-6xl inline-block mr-6' />
+        </a>
+        <a href='alexandre.azevedo.mrus@gmail.com' title='mail'>
+          <FaMailBulk className='text-3xl md:text-6xl inline-block mr-6' />
+        </a>
       </p>
     </div>
   );
